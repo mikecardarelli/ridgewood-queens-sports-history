@@ -1,0 +1,195 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+   
+@font-face {
+  font-family: Jacquard24;
+  src: url(Jacquard24-Regular.ttf);
+}
+
+html {
+	cursor: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" height="32" width="32"><text y="28" font-size="32">🥨️</text></svg>'), auto;
+}
+
+body {
+  background-color: #e7be5b;
+  color: #000000;
+  font-family: helvetica;
+  font-size: 1em;
+}
+
+h1 {
+  font-family: Jacquard24, serif;
+  font-size: 6em;
+  color: #000000;
+}
+
+h2 {
+  font-family: Jacquard24, serif;
+  font-size: 4em;
+  color: #000000;
+}
+
+hr {
+  border: 3px solid #000000;
+}
+
+p {
+font-size: 1.25em;  
+}
+
+footer {
+  text-align: center;
+}
+         
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+        
+.subtitle {
+  text-align: center;
+  color: #000000;
+  margin-bottom: 60px;
+  font-style: italic;
+}
+        
+.timeline {
+  position: relative;
+  padding: 20px 0;
+}
+        
+/* The vertical line */
+.timeline:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #000000;
+  transform: translateX(-50%);
+}
+        
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+  width: 100%;
+}
+        
+/* Alternating left and right */
+.timeline-item:nth-child(odd) .timeline-content {
+  margin-left: 0;
+  margin-right: calc(52% + 10px);
+  text-align: left;
+}
+        
+.timeline-item:nth-child(even) .timeline-content {
+  margin-left: calc(52% + 10px);
+  margin-right: 0;
+  text-align: left;
+}
+        
+/* The dot on the timeline */
+.timeline-dot {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background: #e7be5b;
+    border: 3px solid #000000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #000000;
+    font-size: 1.1em;
+    z-index: 2;
+}
+
+.timeline-content {
+    background: #e7be5b;
+    padding: 20px;
+    border: 3px solid #000000;
+    transition: none;
+}
+
+.years {
+    display: inline-block;
+    background: #000000;
+    color: #e7be5b;
+    padding: 6px 16px;
+    border: 3px solid #000000;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.site-name {
+    color: #000000;
+    font-family: Jacquard24, serif;
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #000000;
+    margin-bottom: 12px;
+    font-size: 0.95em;
+}
+
+.location {
+    color: #000000;
+    font-size: 0.9em;
+    margin-bottom: 12px;
+    font-style: italic;
+}
+
+.location:before {
+    content: "📍 ";
+}
+
+.links {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #000000;
+}
+
+.links a {
+    display: inline-block;
+    margin: 4px;
+    padding: 6px 12px;
+    background: #e7be5b;
+    color: #000000;
+    text-decoration: none;
+    border: 3px solid #000000;
+    font-size: 0.85em;
+    transition: background 0.2s;
+}
+
+.links a:hover {
+    background: #000000;
+    color: #e7be5b;
+}
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .timeline:before {
+        left: 30px;
+    }
+            
+.timeline-dot {
+    left: 30px;
+    width: 40px;
+    height: 40px;
+    font-size: 0.9em;
+}
+            
+.timeline-item:nth-child(odd) .timeline-content,
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: 80px;
+    margin-right: 0;
+    text-align: left;
+}
