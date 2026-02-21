@@ -1,14 +1,6 @@
-/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
-   HTML content. To learn how to do something, just try searching Google for questions like
-   "how to change link color." */
-   
 @font-face {
   font-family: Jacquard24;
   src: url(Jacquard24-Regular.ttf);
-}
-
-html {
-	cursor: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" height="32" width="32"><text y="28" font-size="32">🥨️</text></svg>'), auto;
 }
 
 body {
